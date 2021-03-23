@@ -49,21 +49,16 @@
 			},
 			parsing = () => {
 				var tmp = "";
-				//tmp += "<img width=\"50%\" src=\""+rows[0].owner.avatar_url+"\" />";
 				tmp += "<h1>"+rows[0].owner.login+"</h1>";
-
 				for(i in rows){
 					let row = rows[i];
+					if(row.name.indexOf('.github.io')>0) continue;
 					tmp += "<dl onclick=\"document.location = '"+row.homepage+"'\">";
 						tmp += "<dt>"+row.name+"</dt>";
 						tmp += "<dd>";
 							tmp += row.description+"<span><br />";
-							
 							tmp += "Created " + humanDate(row.created_at) +"<br />";
-
-							
 							tmp += "Last updated " + humanDate(row.updated_at)+"</span><br />";
-							
 						tmp += "</dd>";
 					tmp += "</dl>";
 				}
