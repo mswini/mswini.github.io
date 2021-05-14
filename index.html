@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Github</title>
+		<title>Ms Wini</title>
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 		<link rel="apple-touch-icon" href="favicon.ico" />
 		<link rel="apple-touch-icon-precomposed" href="favicon.ico" />
@@ -43,9 +43,7 @@
 				xhr.send();
 			},
 			humanDate = (text) => {
-				const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-				var date = new Date(text);
-				return date.getDate() + ' ' + month[date.getMonth(text)+1] + ' ' + date.getFullYear();
+				return new Date(text).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 			},
 			parsing = () => {
 				var tmp = "";
