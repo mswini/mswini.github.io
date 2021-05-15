@@ -11,6 +11,8 @@
 		<meta name="viewport" content="minimum-scale=1.0,width=device-width,maximum-scale=1,user-scalable=no" />
 		<style>
 			body {font-family:arial;margin:10px;padding:0;background-color:rgb(250,250,250)}
+			h1 {margin:0;padding:0;}
+			span {color:darkgrey}
 			div {width:1000px;margin:0 auto;}
 			dl {cursor:pointer;border:solid 1px red;padding:10px;background-color:white;border:solid 1px rgba(0, 0, 0, 0.15); border-radius:10px; box-shadow:rgba(0, 0, 0, 0.06) 0px 2px 3px 0px;}
 			dt {font-weight:bolder;font-size:24px;}
@@ -48,6 +50,7 @@
 			parsing = () => {
 				var tmp = "";
 				tmp += "<h1>"+rows[0].owner.login+"</h1>";
+				tmp += "<span>Retired english teacher. These apps are made for my daughter. All codes are made by my husband.</span>";
 				for(i in rows){
 					let row = rows[i];
 					if(row.name.indexOf('.github.io')>0) continue;
